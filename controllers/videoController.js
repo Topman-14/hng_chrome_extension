@@ -27,7 +27,7 @@ function uploadVideo(req, res) {
           return res.status(400).json({ error: 'No file uploaded' });
         }
     
-        const destinationPath = `${baseUrl}/play/${req.file.filename}`;
+        const destinationPath = `${baseUrl}/play/${req.file.filename}`; //http://localhost:4000/play/video_1695994935140.mp4
     
         res.json({
           status: 200,
