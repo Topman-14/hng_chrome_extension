@@ -41,7 +41,15 @@ function serveVideo(req, res) {
     res.sendFile(path.join(__dirname, '..', 'public', 'uploads', req.params.filename));
 }
 
+function landing(req, res){
+    res.json({
+        "status": 404,
+        "message": "endpoint does not exist, check the documentation"
+    })
+}
+
 module.exports = {
   uploadVideo,
-  serveVideo
+  serveVideo,
+  landing
 };
